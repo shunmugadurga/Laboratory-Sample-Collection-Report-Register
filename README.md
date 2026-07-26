@@ -111,6 +111,6 @@ Skill India Hackathon Project
 
 ![Sample Details](screenshot2.png)
 
-### Search & Filter
+### Name
 
-![Search](screenshot3.png)
+![Name](screenshot3.png)
