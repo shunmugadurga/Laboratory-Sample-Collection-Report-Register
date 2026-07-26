@@ -101,7 +101,16 @@ Skill India Hackathon Project
    Laboratory Sample Collection And Report Register demo link
    (https://drive.google.com/file/d/1kEzu9ewvnNyqAL5CA-CRHsT98StQ6V1U/view?usp=sharing)
 
-## screenshots
-- (screenshot1.png)
-- (screenshot2.png)
-- (screenshot3.png)
+## Screenshots
+
+### Dashboard
+
+![Dashboard](screenshot1.png)
+
+### Sample Details
+
+![Sample Details](screenshot2.png)
+
+### Search & Filter
+
+![Search](screenshot3.png)
