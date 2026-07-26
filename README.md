@@ -102,6 +102,6 @@ Skill India Hackathon Project
    (https://drive.google.com/file/d/1kEzu9ewvnNyqAL5CA-CRHsT98StQ6V1U/view?usp=sharing)
 
 ## screenshots
-- screenshot1.png
-- screenshot2.png
-- screenshot3.png
+- (screenshot1.png)
+- (screenshot2.png)
+- (screenshot3.png)
