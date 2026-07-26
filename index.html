@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Laboratory Sample Collection and Report Register</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Full Hospital Banner -->
+
+<div class="hospital-banner">
+    <img src="images/hospital.png" alt="Hospital">
+</div>
+
+<!-- Project Title -->
+
+<div class="title-section">
+
+    <h1>Laboratory Sample Collection & Report Register</h1>
+
+    <img src="images/lab.png"
+         class="lab-logo"
+         alt="Laboratory">
+
+    <p>Manage patient samples and reports efficiently</p>
+
+</div>   
+
+<div class="container">
+
+
+
+<div class="top-bar">
+
+<input
+type="text"
+id="search"
+placeholder="Search Patient..."
+onkeyup="searchTable()">
+
+<select id="statusFilter" onchange="filterTable()">
+
+<option value="All">All Status</option>
+<option value="Pending">Pending</option>
+<option value="Processing">Processing</option>
+<option value="Completed">Completed</option>
+
+</select>
+
+</div>
+
+<p id="count">
+Showing 0 Records
+</p>
+
+<table>
+
+<thead>
+
+<tr>
+
+    <tr>
+    <th>Sample ID</th>
+    <th>Patient</th>
+    <th>Sample</th>
+    <th>Report</th>
+    <th>Test Name</th>
+    <th>Collection Date</th>
+    <th>Status</th>
+    <th>Pending Days</th>
+    <th>Action</th>
+    
+</tr>
+
+</thead>
+
+<tbody id="tableBody">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

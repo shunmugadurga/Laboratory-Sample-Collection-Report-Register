@@ -1,0 +1,16 @@
+sample_id,test_name,pending_days,status,delay_risk
+101,Blood Test,5,Pending,High
+102,Urine Test,0,Completed,Low
+103,Thyroid Test,2,Processing,Low
+104,CBC Test,4,Pending,High
+105,Sugar Test,0,Completed,Low
+106,Blood Test,6,Pending,High
+107,Urine Test,1,Processing,Low
+108,CBC Test,3,Pending,High
+109,Thyroid Test,0,Completed,Low
+110,Sugar Test,5,Pending,High
+111,Blood Test,2,Processing,Low
+112,CBC Test,7,Pending,High
+113,Urine Test,0,Completed,Low
+114,Sugar Test,1,Processing,Low
+115,Blood Test,4,Pending,High

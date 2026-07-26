@@ -1,0 +1,117 @@
+/* Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    padding: 20px;
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Search and Filter */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.top-bar input,
+.top-bar select {
+    padding: 10px;
+    width: 220px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Record Count */
+#count {
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+}
+
+table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Hospital Banner */
+
+.hospital-banner img{
+
+    width:100%;
+    height:auto;
+    display:block;
+
+}
+
+/* Title Section */
+
+.title-section{
+
+    text-align:center;
+    margin:40px 0;
+
+}
+
+.title-section h1{
+
+    font-size:40px;
+    color:#0b3b70;
+    margin-bottom:15px;
+
+}
+
+.lab-logo{
+
+    width:180px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+    margin-bottom:15px;
+
+}
+
+.title-section p{
+
+    font-size:20px;
+    color:#555;
+
+}

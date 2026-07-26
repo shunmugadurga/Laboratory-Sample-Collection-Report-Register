@@ -1,0 +1,47 @@
+[
+    {
+        "sampleId": 101,
+        "patientName": "Ravi Kumar",
+        "gender":"Male",
+        "testName": "Blood Test",
+        "collectionDate": "2026-07-20",
+        "status": "Pending",
+        "pendingDays": 5
+    },
+    {
+        "sampleId": 102,
+        "patientName": "Priya Sharma",
+        "gender":"Female",
+        "testName": "Urine Test",
+        "collectionDate": "2026-07-21",
+        "status": "Processing",
+        "pendingDays": 2
+    },
+    {
+        "sampleId": 103,
+        "patientName": "Arun Raj",
+        "gender":"Male",
+        "testName": "Sugar Test",
+        "collectionDate": "2026-07-18",
+        "status": "Completed",
+        "pendingDays": 0
+    },
+    {
+        "sampleId": 104,
+        "patientName": "Meena Devi",
+        "gender":"Female",
+        "testName": "Thyroid Test",
+        "collectionDate": "2026-07-19",
+        "status": "Pending",
+        "pendingDays": 4
+    },
+    {
+        "sampleId": 105,
+        "patientName": "Karthik",
+        "gender":"Male",
+        "testName": "CBC Test",
+        "collectionDate": "2026-07-22",
+        "status": "Processing",
+        "pendingDays": 1
+    }
+]

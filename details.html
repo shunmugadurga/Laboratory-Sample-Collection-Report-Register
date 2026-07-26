@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Details</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Sample Details</h1>
+
+    <table>
+
+        <tr>
+            <th>Sample ID</th>
+            <td id="sampleId"></td>
+        </tr>
+
+        <tr>
+            <th>Patient</th>
+            <td>
+                <img id="patientImage"
+                    width="80"
+                    height="80"
+                    style="border-radius:50%;margin-bottom:10px;"><br>
+
+                <span id="patientName"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <th>Sample</th>
+            <td>
+                <img src="images/sample.png" width="70">
+            </td>
+        </tr>
+
+        <tr>
+            <th>Report</th>
+            <td>
+                <img src="images/report.png" width="70">
+            </td>
+        </tr>
+
+        <tr>
+            <th>Test Name</th>
+            <td id="testName"></td>
+        </tr>
+
+        <tr>
+            <th>Collection Date</th>
+            <td id="collectionDate"></td>
+        </tr>
+
+        <tr>
+            <th>Status</th>
+            <td id="status"></td>
+        </tr>
+
+        <tr>
+            <th>Pending Days</th>
+            <td id="pendingDays"></td>
+        </tr>
+
+    </table>
+
+    <br>
+
+    <button onclick="goBack()">← Back to Dashboard</button>
+
+</div>
+
+
+<script>
+
+const sampleData = [
+    {
+        sampleId:101,
+        patientName:"Ravi Kumar",
+        gender:"Male",
+        testName:"Blood Test",
+        collectionDate:"2026-07-20",
+        status:"Pending",
+        pendingDays:5
+    },
+    {
+        sampleId:102,
+        patientName:"Priya",
+        gender:"Female",
+        testName:"Urine Test",
+        collectionDate:"2026-07-18",
+        status:"Completed",
+        pendingDays:0
+    },
+    {
+        sampleId:103,
+        patientName:"Arun",
+        gender:"Male",
+        testName:"Thyroid Test",
+        collectionDate:"2026-07-21",
+        status:"Processing",
+        pendingDays:2
+    },
+    {
+        sampleId:104,
+        patientName:"Meena",
+        gender:"Female",
+        testName:"CBC Test",
+        collectionDate:"2026-07-19",
+        status:"Pending",
+        pendingDays:4
+    },
+    {
+        sampleId:105,
+        patientName:"Karthik",
+        gender:"Male",
+        testName:"Sugar Test",
+        collectionDate:"2026-07-22",
+        status:"Completed",
+        pendingDays:0
+    }
+];
+
+const id = Number(localStorage.getItem("sampleId"));
+
+const sample = sampleData.find(item => item.sampleId === id);
+
+if(sample){
+
+document.getElementById("patientImage").src =
+    sample.gender === "Male"
+        ? "images/male.png"
+        : "images/female.png";
+document.getElementById("sampleId").innerHTML = sample.sampleId;
+document.getElementById("patientName").innerHTML = sample.patientName;
+document.getElementById("testName").innerHTML = sample.testName;
+document.getElementById("collectionDate").innerHTML = sample.collectionDate;
+document.getElementById("status").innerHTML = sample.status;
+document.getElementById("pendingDays").innerHTML = sample.pendingDays;
+
+}
+
+function goBack(){
+
+window.location.href="index.html";
+
+}
+
+</script>
+
+</body>
+</html>
