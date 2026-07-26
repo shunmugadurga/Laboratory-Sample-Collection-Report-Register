@@ -61,7 +61,7 @@ function displayTable(data) {
             <td>${sample.sampleId}</td>
 
             <td>
-                <img src="images/${sample.gender === "Male" ? "male.png" : "female.png"}"
+                <img src="${sample.gender === "Male" ? "male.png" : "female.png"}"
                     alt="${sample.gender}"
                     width="40"
                     height="40"
@@ -71,11 +71,11 @@ function displayTable(data) {
             </td>
 
             <td>
-                <img src="images/sample.png" width="35" height="35">
+                <img src="sample.png" width="35" height="35">
             </td>
 
             <td>
-                <img src="images/report.png" width="35" height="35">
+                <img src="report.png" width="35" height="35">
             </td>
 
             <td>${sample.testName}</td>
