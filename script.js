@@ -144,3 +144,90 @@ function viewDetails(id) {
 
 // Load table
 displayTable(sampleData);
+// =============================
+// SIH 2026 Spot Change 1
+// =============================
+// ==========================================
+// SIH 2026 Spot Change 1 - UNIQUE Constraint
+// ==========================================
+
+// Existing phone numbers
+const existingPhones = [
+    "9876543210",
+    "9876543211",
+    "9876543212",
+    "9876543213",
+    "9876543214"
+];
+
+function addPatient() {
+
+    const patientName = document.getElementById("newPatientName").value.trim();
+    const phone = document.getElementById("newPhone").value.trim();
+
+    // NOT NULL Validation
+    if (patientName === "") {
+
+        document.getElementById("change1Result").innerHTML =
+        "<span style='color:red;font-weight:bold;'>❌ ERROR: Patient Name cannot be empty (NOT NULL Constraint).</span>";
+
+        return;
+    }
+
+    // Phone should not be empty
+    if (phone === "") {
+
+        document.getElementById("change1Result").innerHTML =
+        "<span style='color:red;font-weight:bold;'>❌ ERROR: Phone Number cannot be empty.</span>";
+
+        return;
+    }
+
+    // UNIQUE Validation
+    if (existingPhones.includes(phone)) {
+
+        document.getElementById("change1Result").innerHTML =
+        "<span style='color:red;font-weight:bold;'>❌ ERROR: Phone Number already exists (UNIQUE Constraint).</span>";
+
+        return;
+    }
+
+    existingPhones.push(phone);
+
+    document.getElementById("change1Result").innerHTML =
+    "<span style='color:green;font-weight:bold;'>✅ Patient Added Successfully.</span>";
+
+}
+// =============================
+// SIH 2026 Spot Change 2
+// =============================
+
+function showChange2() {
+
+    document.getElementById("change2Result").innerHTML = `
+
+    <table border="1" cellpadding="8">
+
+        <tr>
+            <th>Patient ID</th>
+            <th>Patient Name</th>
+            <th>Status</th>
+        </tr>
+
+        <tr>
+            <td>106</td>
+            <td>Anitha</td>
+            <td>No Sample Record</td>
+        </tr>
+
+        <tr>
+            <td>107</td>
+            <td>Rahul</td>
+            <td>No Sample Record</td>
+        </tr>
+
+    </table>
+
+    `;
+
+}
