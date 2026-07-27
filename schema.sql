@@ -4,7 +4,7 @@ CREATE TABLE Patient (
     patient_name VARCHAR(100) NOT NULL,
     age INT,
     gender VARCHAR(10),
-    phone VARCHAR(15)
+    phone VARCHAR(15) UNIQUE
 );
 
 -- Create Sample Table
@@ -37,3 +37,13 @@ CREATE TABLE StatusHistory (
     updated_on DATE,
     FOREIGN KEY (sample_id) REFERENCES Sample(sample_id)
 );
+
+-- Valid record
+INSERT INTO PATIENT
+VALUES
+(1,'Ravi Kumar',25,'Male','9876543210');
+
+-- Invalid record (same phone number)
+INSERT INTO PATIENT
+VALUES
+(2,'Arun',30,'Male','9876543210');
