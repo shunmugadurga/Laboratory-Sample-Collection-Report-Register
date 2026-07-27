@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Laboratory Sample Collection and Report Register</title>
-
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratory Sample Collection and Report Register</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Full Hospital Banner -->
 
+<!-- Hospital Banner -->
 <div class="hospital-banner">
-    <img src="hospital.png" alt="Hospital">
+    <img src="hospital.png" alt="Hospital Banner">
 </div>
 
 <!-- Project Title -->
-
 <div class="title-section">
-
     <h1>Laboratory Sample Collection & Report Register</h1>
 
     <img src="lab.png"
@@ -27,64 +24,129 @@
          alt="Laboratory">
 
     <p>Manage patient samples and reports efficiently</p>
-
-</div>   
+</div>
 
 <div class="container">
 
+    <div class="top-bar">
 
+        <input
+            type="text"
+            id="search"
+            placeholder="Search Patient..."
+            onkeyup="searchTable()">
 
-<div class="top-bar">
+        <select id="statusFilter" onchange="filterTable()">
 
-<input
-type="text"
-id="search"
-placeholder="Search Patient..."
-onkeyup="searchTable()">
+            <option value="All">All Status</option>
+            <option value="Pending">Pending</option>
+            <option value="Processing">Processing</option>
+            <option value="Completed">Completed</option>
 
-<select id="statusFilter" onchange="filterTable()">
+        </select>
 
-<option value="All">All Status</option>
-<option value="Pending">Pending</option>
-<option value="Processing">Processing</option>
-<option value="Completed">Completed</option>
+    </div>
 
-</select>
+    <p id="count">Showing 0 Records</p>
 
-</div>
+    <table>
 
-<p id="count">
-Showing 0 Records
-</p>
+        <thead>
 
-<table>
+            <tr>
+                <th>Sample ID</th>
+                <th>Patient</th>
+                <th>Sample</th>
+                <th>Report</th>
+                <th>Test Name</th>
+                <th>Collection Date</th>
+                <th>Status</th>
+                <th>Pending Days</th>
+                <th>Action</th>
+            </tr>
 
-<thead>
+        </thead>
 
-<tr>
+        <tbody id="tableBody">
 
-    <tr>
-    <th>Sample ID</th>
-    <th>Patient</th>
-    <th>Sample</th>
-    <th>Report</th>
-    <th>Test Name</th>
-    <th>Collection Date</th>
-    <th>Status</th>
-    <th>Pending Days</th>
-    <th>Action</th>
-    
-</tr>
+        </tbody>
 
-</thead>
-
-<tbody id="tableBody">
-
-</tbody>
-
-</table>
+    </table>
 
 </div>
+
+<hr>
+
+<h2 align="center">SIH 2026 - On Spot Changes</h2>
+<section class="spot-changes">
+
+
+    <!-- Change 1 -->
+
+    <div class="change-box">
+
+        <h3>Change 1 - NOT NULL & UNIQUE Constraint</h3>
+
+        <p>
+            Enter the patient details below.
+            <br><br>
+            • If Patient Name is empty → NOT NULL Constraint Error
+            <br>
+            • If Phone Number already exists → UNIQUE Constraint Error
+        </p>
+
+        <label><b>Patient Name</b></label><br>
+
+        <input
+            type="text"
+            id="newPatientName"
+            placeholder="Enter Patient Name">
+
+        <br><br>
+
+        <label><b>Phone Number</b></label><br>
+
+        <input
+            type="text"
+            id="newPhone"
+            placeholder="Enter Phone Number">
+
+        <br><br>
+
+        <button onclick="addPatient()">
+            Add Patient
+        </button>
+
+        <br><br>
+
+        <p id="change1Result"></p>
+
+    </div>
+
+    <hr>
+
+    <!-- Change 2 -->
+
+    <div class="change-box">
+
+        <h3>Change 2 - Patients Without Sample Record</h3>
+
+        <p>
+            Click the button below to display patients
+            who do not have any sample record.
+        </p>
+
+        <button onclick="showChange2()">
+            Show Missing Records
+        </button>
+
+        <br><br>
+
+        <div id="change2Result"></div>
+
+    </div>
+
+</section>
 
 <script src="script.js"></script>
 
